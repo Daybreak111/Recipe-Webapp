@@ -89,6 +89,8 @@
             </div>
         </div>
 
+        <% if (locals.isLogin){ %>
+
         <!-- Create calendar style recipe recommendation area -->
         <div class="container" style="margin-top: 3em;">
 
@@ -121,7 +123,7 @@
             <div class="row qc"  style="margin-top: 2em;">
                 <div class="col">
                     <img src="images/r1.jpg" style="width: 100%;">
-                    <h>Vegetable Salad</h>
+                    <h><% locals.recipes_info</h>
                 </div>
                 <div class="col">
                     <img src="images/r1.jpg" style="width: 100%;">
@@ -211,8 +213,13 @@
                     <h>French Toast</h>
                 </div>
             </div>
+            <% } else { %>
 
 
+                <div class="container" style="margin-top: 3em;">
+                    <div>This is aviliable for Login Users.</div>
+                </div>
+            <% } %>
         </div>
 
 
